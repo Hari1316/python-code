@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Marvin.Cache.Headers" Version="6.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.20" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MSCMS_Datalayer\MSCMS_Datalayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MSCMS_BusinessLayer">
+      <HintPath>..\MSCMS_BusinessLayer\bin\Debug\net6.0\MSCMS_BusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCMS_Datalayer">
+      <HintPath>..\MSCMS_BusinessLayer\bin\Debug\net6.0\MSCMS_Datalayer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
